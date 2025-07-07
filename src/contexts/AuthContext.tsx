@@ -42,7 +42,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
     }
   }, []);
 
-  const login = async (email: string, password: string): Promise<boolean> => {
+  const login = async (email: string, _password: string): Promise<boolean> => {
     // Simulate API call - In real app, this would call your backend
     try {
       // For demo purposes, accept any email/password combo
