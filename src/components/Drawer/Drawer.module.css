@@ -1,0 +1,91 @@
+/* File: src/components/Drawer/Drawer.module.css */
+/* .drawer {
+  width: 0;
+  transition: width 0.3s ease;
+  background-color: white;
+  overflow: hidden;
+  height: 100vh;
+  border-left: 1px solid #e5e7eb;
+  box-shadow: -4px 0 15px rgba(0, 0, 0, 0.1);
+  position: relative;
+} */
+
+.open {
+  width: 320px;
+}
+
+.header {
+  padding: 16px;
+  background: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%);
+  color: white;
+}
+
+.header h2 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.header p {
+  font-size: 12px;
+  margin-top: 4px;
+  color: #dbeafe;
+}
+
+.list {
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  height: calc(100% - 128px);
+  overflow-y: auto;
+}
+
+.footer {
+  padding: 12px;
+  font-size: 12px;
+  border-top: 1px solid #e5e7eb;
+  background-color: #f9fafb;
+  display: flex;
+  justify-content: space-between;
+}
+
+.toggleBtn {
+  position: absolute;
+  top: 50%;
+  left: -16px;
+  transform: translateY(-50%);
+  background-color: white;
+  border: 1px solid #e5e7eb;
+  padding: 4px 8px;
+  cursor: pointer;
+  border-radius: 4px 0 0 4px;
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.drawer {
+  width: 320px;
+  transition: width 0.3s ease;
+  background-color: white;
+  height: 100vh;
+  border-left: 1px solid #e5e7eb;
+  box-shadow: -4px 0 15px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  .drawer {
+    width: 100%;
+    position: absolute;
+    top: 64px; /* below header */
+    left: 0;
+    z-index: 100;
+  }
+
+  .toggleBtn {
+    right: 0;
+    left: auto;
+    top: 64px;
+    transform: none;
+    border-radius: 0 0 0 4px;
+  }
+}
